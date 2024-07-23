@@ -3,12 +3,13 @@ import { Table, Modal } from "antd";
 import '../../css/dashboard.css'
 import {EditOutlined, DeleteOutlined} from '@ant-design/icons'
 import axios from "axios";
+import { BASE_URL } from "../../enviroment";
 const Dashboard = () => {
     const [dataSource, setDataSource] = useState([])
 
   
         const fetchData = async () => {
-            const response = await fetch('http://localhost:8000/api/cases/get-cases') 
+            const response = await fetch(`http://${BASE_URL}:8000/api/cases/get-cases`) 
             const data = await response.json();
             setDataSource(data.data.cases)
         }
@@ -67,7 +68,7 @@ const Dashboard = () => {
             Modal.confirm({
                 title: 'Want to delete this',
                 onOk: async () => {
-                    const response = await axios.delete(`http://localhost:8000/api/cases/delete-cases/${record._id}`)
+                    const response = await axios.delete(`http://${BASE_URL}:8000/api/cases/delete-cases/${record._id}`)
                     if (response.status === 200) {
                       const updateCategory = dataSource.filter(
                         (categoryItem) => categoryItem._id !== record.key

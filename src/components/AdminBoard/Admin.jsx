@@ -4,7 +4,6 @@ import Content from './elements/Content';
 import {  HomeOutlined, UserOutlined } from '@ant-design/icons';
 import { useNavigate } from 'react-router-dom';
 const { Header} = Layout
-
 const Admin = () => {
   const navigate = useNavigate();
   return (

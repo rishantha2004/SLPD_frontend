@@ -1,72 +1,92 @@
-/* Example styles for your React application */
 body {
-    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f5f5f5;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    font-family: Arial, sans-serif;
     height: 100vh;
-}
-
-.container {
-    width: 350px; /* Adjust width as needed */
-    padding: 40px 30px;
-    background-color: #ffffff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
+    display: flex;
+    background: #f0f2f5;
+  }
+  
+  .container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    box-sizing: border-box;
+  }
+  
+  .header {
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-.header {
-    font-size: 28px;
-    font-weight: bold;
-    margin-bottom: 20px;
-    color: #333;
-}
-
-.form-group {
-    margin-bottom: 20px;
+    gap: 9px;
     width: 100%;
-}
-
-.form-group label {
-    display: block;
-    font-size: 18px;
-    margin-bottom: 8px;
-    color: #555;
-}
-
-.form-group input {
+  }
+  
+  .text {
+    color: #3c009d;
+    font-size: 32px;
+    font-weight: 700;
+  }
+  
+  .underline {
+    width: 61px;
+    height: 6px;
+    background: #3c009d;
+    border-radius: 9px;
+  }
+  
+  .inputs {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .input {
+    display: flex;
+    align-items: center;
     width: 100%;
-    padding: 12px;
-    border: 1px solid #ccc;
+    height: 50px;
+    background: #eaeaea;
+    border-radius: 6px;
+  }
+  
+  .input input {
+    height: 100%;
+    width: 100%;
+    background: transparent;
+    border: none;
+    padding: 0 15px;
+    font-size: 16px;
+    outline: none;
+  }
+  
+  .submit-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+  }
+  
+  .submit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    color: #fff;
+    background: #4c00b4;
     border-radius: 6px;
     font-size: 16px;
-    transition: border-color 0.3s ease-in-out;
-}
-
-.form-group input:focus {
-    outline: none;
-    border-color: #007bff;
-}
-
-button {
-    width: 100%;
-    padding: 12px;
-    border: none;
-    border-radius: 6px;
-    background-color: #007bff;
-    color: white;
-    font-size: 18px;
-    font-weight: bold;
+    font-weight: 700;
     cursor: pointer;
-    transition: background-color 0.3s ease-in-out;
-}
-
-button:hover {
-    background-color: #0056b3;
-}
+  }
+  
+  .error {
+    color: red;
+    gap: 20px;
+  }
